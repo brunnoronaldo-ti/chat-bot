@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Bot Web</title>
+</head>
+<body>
+    <h1>🤖 </h1>
+    <h1>Bot</h1>
+
+    <form method="POST" action ="/">
+        <input type="text" name="mensagem" placeholder="Digite algo..." required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% for msg in conversa %}
+        <p><strong>Você:</strong> {{ msg.usuario }}</p>
+        <p><strong>Bot:</strong> {{ msg.bot }}</p>
+    {% endfor %}
+
+</body>
+</html>
